@@ -1,4 +1,10 @@
-{{ config(materialized='ship') }}
+select *
+from {{ ref('product') }}
+where id = 1
+
+
+
+/*{{ config(materialized='ship') }}
 
 with ship as (
 
@@ -9,4 +15,4 @@ with ship as (
 )
 
 select *
-from ship
+from ship*/
